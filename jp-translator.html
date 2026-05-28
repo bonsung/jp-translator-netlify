@@ -145,7 +145,7 @@ async function go() {
 
   await Promise.all(jobs.map(async lang => {
     try {
-      const r = await fetch('/.netlify/functions/translate', {
+      const r = await fetch('/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, lang, mode })
